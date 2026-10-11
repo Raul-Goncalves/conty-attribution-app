@@ -10,10 +10,10 @@ class SystemClock implements Clock {
 }
 
 class FixedClock implements Clock {
-  final DateTime _fixedInstant;
+  final DateTime instant;
 
-  FixedClock(this._fixedInstant);
+  FixedClock(this.instant);
 
   @override
-  DateTime now() => _fixedInstant.toUtc();
+  DateTime now() => instant;
 }
